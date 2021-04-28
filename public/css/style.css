@@ -7,6 +7,38 @@
   --gray-d: rgb(59, 59, 59);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  font-size: 20px;
+  height: 68px;
+  color: white;
+  font-size: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  color: var(--blue-l);
+}
+
 .background-img {
   border: none;
   width: 100%;
@@ -21,7 +53,8 @@
   padding: 4px;
 }
 
-.logo {
+/* Homepage */
+.logo-home {
   background-image: url("../img/treatyoshelf-logo.svg");
   border: none;
   width: 100%;
@@ -63,6 +96,7 @@
   color: white;
   border-radius: 12px;
   border: none;
+  margin-right: 10px;
 }
 
 .login-btn {
@@ -71,4 +105,61 @@
   color: white;
   border-radius: 12px;
   border: none;
+  margin-left: 10px;
+}
+
+/* Login page */
+.logo-login {
+  background-image: url("../img/treatyoshelf-logo.svg");
+  border: none;
+  width: 100%;
+  padding: 77px;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  /* background-image: inherit; */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+}
+
+.header-text-login {
+  color: white;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header-text-login h1 {
+  font-size: 42px;
+}
+
+.header-text-login h3 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.login-container {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+}
+
+.login-container input {
+  font-size: 18px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn-sub {
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  margin-left: 10px;
 }
