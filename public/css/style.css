@@ -182,3 +182,12 @@
   border: none;
   align-items: center;
 }
+
+/* list page */
+.header-text-list {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
