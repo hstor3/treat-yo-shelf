@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tech Blog
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="flex-column justify-space-around">
+      <header class="align-center col-12">
+        {{#if loggedIn}}
+          <h1>
+            <p class="col-3">
+              The Tech Blog
+            </p>
+            <a href="/" class="col-3">
+              Home
+            </a>
+            <a href="/dashboard" class="col-3">
+              Dashboard
+            </a>
+            <button class="no-button" class="col-3" id="logout">
+              Logout
+            </button>
+          </h1>
+        {{else}}
+          <h1 class="container row justify-content">
+            <p class="col-6">
+              The Tech Blog
+            </p>
+            <a class="col-6" href="/login">
+              Login
+            </a>
+          </h1>
+        {{/if}}
+      </header>
+      <main class="container col-10">
+        {{{body}}}
+      </main>
+      <footer></footer>
+    </div>
+    {{#if loggedIn}}
+      <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+      ></script>
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+</html>
