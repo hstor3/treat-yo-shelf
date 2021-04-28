@@ -163,3 +163,22 @@
   border: none;
   margin-left: 10px;
 }
+
+/* Search page */
+.searchbar input {
+  width: 80%;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  padding: 12px;
+  margin: 20px;
+  text-align: center;
+}
+
+.search-btn {
+  color: white;
+  font-size: 30px;
+  background: none;
+  border: none;
+  align-items: center;
+}
