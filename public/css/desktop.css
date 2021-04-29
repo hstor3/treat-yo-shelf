@@ -1,0 +1,14 @@
+:root {
+  --blue: #0c66e8;
+  --blue-l: #00acff;
+  --blue-d: #0f0d14;
+  --white: #ffffff;
+  --gray-l: rgb(105, 103, 103);
+  --gray-d: rgb(59, 59, 59);
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    padding: 70px;
+  }
+}
