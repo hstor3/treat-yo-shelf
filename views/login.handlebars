@@ -7,27 +7,37 @@
     Sign UP or Login
   </h3>
 </div>
-<div class="login-container">
-  <label for="uname">
-    <b>
-      Username
-    </b>
-  </label>
-  <br />
-  <input type="text" placeholder="Enter Username" name="uname" required />
-  <label for="psw">
-    <b>
-      Password
-    </b>
-  </label>
-  <br />
-  <input type="password" placeholder="Enter Password" name="psw" required />
-</div>
-<div class="center">
-  <button class="login-btn-sub" type="submit">
-    Login
-  </button>
-</div>
+
+{{!-- login form --}}
+  <form class="login-form">
+      <div class="login-container">
+        <label for="uname">Username</label>
+        <input class="user-input" placeholder="Please enter a username" type="text" id="username" />
+      </div>
+      <div class="password-container">
+        <label for="psw">Password</label>
+        <input class="pass-input" type="password" placeholder="Enter password" id="password" />
+      </div>
+      <div class="center">
+        <button class="btn login-btn-sub" type="submit">login</button>
+      </div>
+    </form>
+
+{{!-- sign up form --}}
+    <form class="signup-form">
+      <div class="form-group">
+        <label for="username-signup">username:</label>
+        <input class="userInput" type="text" id="signup-username" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="passInput" type="password" id="signup-password" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+
 <nav class="navbar">
   <a href="index.html">
     <i class="fas fa-home"></i>
@@ -43,3 +53,5 @@
   </a>
   <i class="fas fa-bars"></i>
 </nav>
+
+<script src="./js/login.js"></script>
