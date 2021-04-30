@@ -9,7 +9,7 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create({
   helpers,
@@ -36,27 +36,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-sequelize
-  .sync({
-    force: false,
+sequelize.sync({force: true,
   })
   .then(() => {
-    app.listen(PORT, () => console.log("Now listening"));
+    app.listen(PORT, () => console.log("Now listening on port 3001"));
   });
-
-/*
-TODO: Setup ENV X
-TODO: Change Models over to new Process. X
-TODO: Setup Seed File X
-TODO: Make sure Package and Server files are what they are supposed to be. X
-TODO: Change Routes over to new Process. X
-TODO: Make sure stuff's ready:
-TODO: Homepage, Signup, Signin, Dashboard, Logout
-TODO: Update Post X
-TODO: Change Handlebars.
-TODO: Change Utilities.
-TODO: ESLint to our wishes.
-TODO: Load Public folder with necessary things
-TODO: Change CSS.
-TODO: Setup Database X
-*/
