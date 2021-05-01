@@ -93,4 +93,12 @@ router.get("/search", async (req, res) => {
   }
 });
 
+router.get("/recommended", async (req, res) => {
+  try {
+    res.render("recommended", {});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
