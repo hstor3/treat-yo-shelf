@@ -53,6 +53,12 @@
   padding: 4px;
 }
 
+.top-logout-btn {
+  color: white;
+  float: right;
+  padding: 10px;
+}
+
 /* Homepage */
 .logo-home {
   background-image: url("../img/treatyoshelf-logo.svg");
