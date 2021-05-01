@@ -12,5 +12,5 @@ const logout = async () => {
   };
   
 // add the id or class from the FORM element
-  document.querySelector('').addEventListener('click', logout);
+  document.querySelector('#logout').addEventListener('click', logout);
   

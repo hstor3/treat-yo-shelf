@@ -23,19 +23,36 @@
       </div>
     </form>
 
-{{!-- sign up form --}}
-    <form class="signup-form">
-      <div class="form-group">
-        <label for="username-signup">username:</label>
-        <input class="userInput" type="text" id="signup-username" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="passInput" type="password" id="signup-password" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+<form class="signup-form">
+  <div class="form-group">
+    <label for="username-signup">Username:</label>
+    <input class="userInput" type="text" placeholder="Please enter your Username" id="signup-username" />
+  </div>
+
+  <div class="form-group">
+    <label for="password-signup">Password:</label>
+    <input class="passInput" type="password" placeholder="Enter your Password" id="signup-password" />
+  </div>
+
+  <div class="form-group center">
+    <button class="btn btn-primary signup-btn-sub" type="submit">signup</button>
+  </div>
+</form>
+
+<nav class="navbar">
+  <a href="/">
+    <i class="fas fa-home"></i>
+  </a>
+  <a href="/search">
+    <i class="fas fa-search"></i>
+  </a>
+  <a href="/lists">
+    <i class="fas fa-layer-group"></i>
+  </a>
+  <a href="/recommended">
+    <i class="fas fa-book-open"></i>
+  </a>
+  <i class="fas fa-bars"></i>
+</nav>
 
 <script src="./js/login.js"></script>
