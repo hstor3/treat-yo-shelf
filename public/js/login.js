@@ -22,10 +22,9 @@ const loginForm = async (e) => {
 const signup = async (e) => {
     e.preventDefault();
 
-    // debugger
     const email = document.querySelector('.userInput').value.trim();
     const password = document.querySelector('.passInput').value.trim();
-// debugger
+    
     if (email && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
