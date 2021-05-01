@@ -33,20 +33,21 @@ router.get('/post/:id', async (req, res) => {
     ...post,
     loggedIn: req.session.loggedIn
   });
+  
+router.get("/lists", async (req, res) => {
+  try {
+    res.render("lists", {});
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/homepage', withAuth, async (req, res) => {
-  const userInfo = await User.findByPk(req.session.userId, {
-    attributes: { exclude: ['password'] },
-    include: [{ model: Post }],
-  })
-
-  const user = userInfo.get({ plain: true });
-
-  res.render('homepage', {
-    ...user,
-    loggedIn: true
-  });
+router.get("/", async (req, res) => {
+  try {
+    res.render("login", {});
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {
@@ -54,7 +55,14 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login')
+});
+
+router.get("/search", async (req, res) => {
+  try {
+    res.render("search", {});
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
