@@ -53,6 +53,12 @@
   padding: 4px;
 }
 
+.top-logout-btn {
+  color: white;
+  float: right;
+  padding: 10px;
+}
+
 /* Homepage */
 .logo-home {
   background-image: url("../img/treatyoshelf-logo.svg");
@@ -137,7 +143,7 @@
   margin-top: 10px;
 }
 
-.login-container {
+.login-form {
   color: white;
   text-align: center;
   font-size: 18px;
@@ -164,6 +170,28 @@
   margin-left: 10px;
 }
 
+.signup-form {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  /* opacity: 0.4; */
+  /* background: rgba(36, 47, 148, 0.8); */
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+}
+
+.signup-btn-sub {
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  margin-left: 10px;
+}
+
 /* Search page */
 .searchbar input {
   width: 80%;
@@ -181,6 +209,32 @@
   background: none;
   border: none;
   align-items: center;
+}
+
+.search-display-card {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.search-img {
+  margin: 10px;
+}
+
+.search-title {
+  color: white;
+}
+
+.search-author {
+  color: white;
+}
+
+.search-description {
+  color: white;
 }
 
 /* list page */
