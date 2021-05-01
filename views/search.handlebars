@@ -1,21 +1,38 @@
 <div class="searchbar center">
-  <input type="text" placeholder="Search for your favorite book" />
-  <button class="search-btn" type="submit">
-    <i class="fas fa-search"></i>
-  </button>
+  <form class="search-form">
+    <input
+      class="form-input"
+      type="text"
+      autocomplete="search"
+      placeholder="Search for your favorite book"
+      id="search-term"
+    />
+    <button class="search-btn" type="submit">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
 </div>
+{{#each results as |result|}}
+  <img src="http://covers.openlibrary.org/b/id/{{result.cover_i}}-L.jpg">{{result}}</div>
+{{/each}}
 <nav class="navbar">
-  <a href="index.html">
+  <a href="">
     <i class="fas fa-home"></i>
   </a>
-  <a href="search.html">
+  <a href="search">
     <i class="fas fa-search"></i>
   </a>
-  <a href="list.html">
+  <a href="list">
     <i class="fas fa-layer-group"></i>
   </a>
-  <a href="recommended.html">
+  <a href="recommended">
     <i class="fas fa-book-open"></i>
   </a>
   <i class="fas fa-bars"></i>
 </nav>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script src="./js/search.js"></script>

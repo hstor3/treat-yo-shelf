@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/lists", async (req, res) => {
   try {
     res.render("lists", {});
   } catch (err) {
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/login", async (req, res) => {
   try {
     res.render("login", {});
   } catch (err) {
@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/search", async (req, res) => {
   try {
     res.render("search", {});
   } catch (err) {
