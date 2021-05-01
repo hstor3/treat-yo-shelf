@@ -53,6 +53,12 @@
   padding: 4px;
 }
 
+.top-logout-btn {
+  color: white;
+  float: right;
+  padding: 10px;
+}
+
 /* Homepage */
 .logo-home {
   background-image: url("../img/treatyoshelf-logo.svg");
@@ -181,6 +187,32 @@
   background: none;
   border: none;
   align-items: center;
+}
+
+.search-display-card {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.search-img {
+  margin: 10px;
+}
+
+.search-title {
+  color: white;
+}
+
+.search-author {
+  color: white;
+}
+
+.search-description {
+  color: white;
 }
 
 /* list page */
