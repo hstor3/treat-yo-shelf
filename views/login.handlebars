@@ -9,25 +9,20 @@
 </div>
 
 {{!-- login form --}}
-<form class="login-form">
-  <h3>Login</h3>
+  <form class="login-form">
+      <div class="login-container">
+        <label for="uname">Username</label>
+        <input class="user-input" placeholder="Please enter a username" type="text" id="username" />
+      </div>
+      <div class="password-container">
+        <label for="psw">Password</label>
+        <input class="pass-input" type="password" placeholder="Enter password" id="password" />
+      </div>
+      <div class="center">
+        <button class="btn login-btn-sub" type="submit">login</button>
+      </div>
+    </form>
 
-  <div class="login-containers">
-    <label for="uname">Username:</label>
-    <input class="user-input" placeholder="Please enter your Username" type="text" id="username" />
-  </div>
-
-  <div class="password-container">
-    <label for="psw">Password:</label>
-    <input class="pass-input" type="password" placeholder="Enter your Password" id="password" />
-  </div>
-
-  <div class="center">
-    <button class="btn login-btn-sub" type="submit">login</button>
-  </div>
-</form>
-
-{{!-- sign up form --}}
 <form class="signup-form">
   <h3>Sign UP</h3>
 

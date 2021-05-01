@@ -51,7 +51,7 @@ router.get('/homepage', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
   res.render('login')
