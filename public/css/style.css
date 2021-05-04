@@ -30,6 +30,25 @@
   padding: 8px;
 }
 
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.navList {
+  display: none;
+}
+
+.navList.show {
+  display: flex
+}
+
 .navbar a {
   text-decoration: none;
   color: white;
