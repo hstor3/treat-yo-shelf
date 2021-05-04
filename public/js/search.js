@@ -2,8 +2,9 @@
 const searchDb = async (event) => {
   event.preventDefault();
 
-  const search = $("#search-term").val().trim();
+  const search = $("#searchTerm").val().trim();
   const fullSearch = search.split(" ").join("+");
+  let finalResults = {};
 
   if (fullSearch) {
     await fetch("https://openlibrary.org/search.json?q=" + fullSearch)
@@ -11,24 +12,25 @@ const searchDb = async (event) => {
         return response.json();
       })
       .then((responseData) => {
-        console.log(responseData);
-        return responseData;
-      })
-      .then((data) => {
-        this.setState({ questions: data });
+        finalResults = responseData.docs;
+        console.log(finalResults);
+        finalResults.map((result) => {
+          $("#searchResultsSection").append(`
+  <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
+  <h1 class="search-title">
+    Title:
+    ${result.title}
+  </h1>
+  <h3 class="search-author">
+    Author:
+    ${result.author_name}
+  </h3>`);
+        });
       })
       .catch((err) => {
         console.log("fetch error" + err);
       });
   }
-
-  // console.log(response.json());
-
-  // if (response.ok) {
-  //   // document.location.replace("/search");
-  // } else {
-  //   alert(response.statusText);
-  // }
 };
 
 $(".search-form").on("submit", searchDb);

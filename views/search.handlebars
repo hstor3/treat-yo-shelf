@@ -12,32 +12,29 @@
     </button>
   </form>
 </div>
-
-{{#each results as |result|}}
-<div class="search-display-card">
-  <img class="search-img" src="" alt="Book IMG">
-  <h1 class="search-title">Title</h1>
-  <h3 class="search-author">Author</h3>
-  <p class="search-description">Description paragraphs words go here</p>
+<div
+  rv-unless="searchResults"
+  rv-each-searchCard="results"
+  class="searchCard search-display-card"
+  id="searchResultsSection"
+>
 </div>
+<<<<<<< Updated upstream
 {{/each}}
+
 <nav class="navbar">
   <a href="/">
     <i class="fas fa-home"></i>
   </a>
-
   <a href="/search">
     <i class="fas fa-search"></i>
   </a>
-
   <a href="/lists">
     <i class="fas fa-layer-group"></i>
   </a>
-
   <a href="/recommended">
     <i class="fas fa-book-open"></i>
   </a>
-
   <i class="fas fa-bars"></i>
 </nav>
 <script
