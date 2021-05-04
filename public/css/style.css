@@ -42,8 +42,8 @@
 }
 
 .nav-list {
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   background-color: rgba(7, 6, 6, 0.678);
   width: 100%;
