@@ -12,7 +12,6 @@
 let hamburger = document.getElementById('hamburger');
 if (hamburger) {
     hamburger.addEventListener('click', openHam)
-    console.log("eeeee");
 }
 
 let navList = document.getElementById('nav-list');
