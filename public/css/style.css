@@ -42,23 +42,31 @@
 }
 
 .nav-list {
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   background-color: rgba(7, 6, 6, 0.678);
   width: 100%;
   font-size: 44px;
   padding: 15px;
   border-radius: 25px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   position: fixed;
   bottom: 0;
   left: 0;
+  height: 460px;
 }
 
 .nav-list.show {
-  display: flex
+  display: flex;
+}
+
+.icon-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 41px;
 }
 
 .navbar a {
