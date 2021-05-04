@@ -25,6 +25,7 @@ const currentSession = {
 
 app.use(session(currentSession));
 
+// using handlebars
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
@@ -36,5 +37,5 @@ app.use(routes);
 
 app.listen(PORT, () => {
   sequelize.sync({ force: false })
-    console.log('Now listening on port 3001')
+  console.log('Now listening on port 3001')
 });
