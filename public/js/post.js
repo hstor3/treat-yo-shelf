@@ -30,7 +30,7 @@ const deletePost = async (e) => {
 }
 
 // add post id or class here
-let getPost = document.querySelector();
+let getPost = document.querySelector('');
 if (getPost) {
     getPost.addEventListener('click', addPost)
 };

@@ -41,64 +41,29 @@ router.get("/post/:id", async (req, res) => {
     ...post,
     loggedIn: req.session.loggedIn,
   });
-});
 
-router.get("/lists", async (req, res) => {
-  try {
-    res.render("lists", {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get("/account", async (req, res) => {
-  try {
-    res.render("account", {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get("/homepage", withAuth, async (req, res) => {
-  // try {
-  const userData = await User.findByPk(req.session.userId, {
-    attributes: { exclude: ["password"] },
+  router.get('/homepage', withAuth, async (req, res) => {
+  const userInfo = await User.findByPk(req.session.userId, {
+    attributes: { exclude: ['password'] },
     include: [{ model: Post }],
-  });
+  })
 
-  const user = userData.get({ plain: true });
+  const user = userInfo.get({ plain: true });
 
-  res.render("homepage", {
+  res.render('homepage', {
     ...user,
-    loggedIn: true,
-  });
-  // } catch (err) {
-  //     res.status(500).json(err);
-  // }
+    loggedIn: true
+  })
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/homepage");
-    return;
-  }
-  res.render("login");
+  router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/homepage');
+      return;
+    }
+    res.render('login')
+  })
 });
 
-router.get("/search", async (req, res) => {
-  try {
-    res.render("search", {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get("/recommended", async (req, res) => {
-  try {
-    res.render("recommended", {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;

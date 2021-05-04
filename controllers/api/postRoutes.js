@@ -3,7 +3,6 @@ const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
-//   try {
   Post.create(req.body).then((createPost) => {
     res.status(200).json(createPost);
   }).then(() => {
@@ -16,7 +15,6 @@ router.put("/:id", withAuth, (req, res) => {
     where: {
       id: req.params.id
     }
-      // },
   }).then(updatePost => {
       res.status(200).json(updatePost)
     })
@@ -31,7 +29,6 @@ router.delete("/:id", withAuth, (req, res) => {
     Post.destroy({
       where: {
         id: req.params.id,
-        // userId: req.session.userId,
       },
     }).then(deletePost => {
       res.status(200).json(deletePost)
