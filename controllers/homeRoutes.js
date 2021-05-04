@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
   });
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', withAuth, async (req, res) => {
   const postId = await Post.findByPk(req.params.userId, {
     include: [
       {
@@ -30,11 +30,11 @@ router.get('/post/:id', async (req, res) => {
 
   const post = postId.get({ plain: true });
   res.render('homepage', {
-    ...post,
+    post,
     loggedIn: req.session.loggedIn
   });
 
-  router.get('/homepage', withAuth, async (req, res) => {
+  router.get('homepage', withAuth, async (req, res) => {
   const userInfo = await User.findByPk(req.session.userId, {
     attributes: { exclude: ['password'] },
     include: [{ model: Post }],
@@ -43,14 +43,14 @@ router.get('/post/:id', async (req, res) => {
   const user = userInfo.get({ plain: true });
 
   res.render('homepage', {
-    ...user,
+    user,
     loggedIn: true
   })
 });
 
   router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/homepage');
+      res.redirect('/');
       return;
     }
     res.render('login')

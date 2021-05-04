@@ -12,13 +12,21 @@ Post.init(
     body: {
       type: DataTypes.STRING,
     },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "post",
+    // timestamps: false,
+    // freezeTableName: true,
+    // underscored: true,
+    // modelName: "post",
   }
 );
 
