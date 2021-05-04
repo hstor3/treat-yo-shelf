@@ -2,15 +2,51 @@ const router = require("express").Router();
 const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.post("/", withAuth, async (req, res) => {
-  Post.create(req.body).then((createPost) => {
-    res.status(200).json(createPost);
-  }).then(() => {
-      res.redirect('/')
-    })
-    });
+router.get('/post/:id/comments', withAuth, async (req, res) => {
+  res.render('comments', {
+    loggedIn: req.session.loggedIn
+  })
+});
 
-router.put("/:id", withAuth, (req, res) => {
+router.get('post/comments/:id', async (req, res) => {
+  const commentContent = await Comment.findByPk(req.params.id, {
+    include: [
+      {
+        model: Post,
+        attributes: ['id'],
+      },
+    ],
+  });
+  const comments = commentContent.get({ plain: true });
+  res.render('comments', {
+    comments,
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.post('/:id/comment', (req, res) => {
+  Comment.create({
+    body: req.body.body,
+    postId: req.params.id,
+    userId: req.session.userId,
+  }).then((newComment) => {
+    res.status(200).json(newComment)
+  }).then(() => {
+    res.redirect('/')
+  })
+});
+
+router.post('/', (req, res) => {
+  Post.create({
+    body: req.body.body,
+    title: req.body.title,
+    userId: req.session.userId
+  }).then((createPost) => {
+    res.status(200).json(createPost);
+  })
+});
+
+router.put("/:id", (req, res) => {
   Post.update(req.body, {
     where: {
       id: req.params.id
@@ -25,7 +61,7 @@ router.put('/', (req, res) => {
   return;
 });
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     Post.destroy({
       where: {
         id: req.params.id,
