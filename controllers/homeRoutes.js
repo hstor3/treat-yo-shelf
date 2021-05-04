@@ -67,6 +67,10 @@ router.get('homepage', withAuth, async (req, res) => {
     res.render('login')
   })
 
-
+router.get('/search', withAuth, async (req, res) => {
+  res.render('search', {
+    loggedIn: req.session.loggedIn
+  })
+});
 
 module.exports = router;
