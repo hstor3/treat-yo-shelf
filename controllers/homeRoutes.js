@@ -73,4 +73,16 @@ router.get('/search', withAuth, async (req, res) => {
   })
 });
 
+router.get('/lists', withAuth, async (req, res) => {
+  res.render('lists', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.get('/recommended', withAuth, async (req, res) => {
+  res.render('recommended', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
 module.exports = router;
