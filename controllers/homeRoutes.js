@@ -2,19 +2,27 @@ const router = require("express").Router();
 const { Post, User } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   const postInfo = await Post.findAll({
     include: [
       {
         model: User,
-        attributes: ['email']
+        attributes: ["email"],
       },
     ],
   });
   const posts = postInfo.map((post) => post.get({ plain: true }));
-  res.render('homepage', {
+  res.render("homepage", {
     posts,
-    loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn,
+  });
+});
+
+router.get("/posts", async (req, res) => {
+  // alert();
+  console.log("hey");
+  res.render("posts", {
+    loggedIn: req.session.loggedIn,
   });
 });
 
@@ -23,7 +31,7 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['id'],
+        attributes: ["id"],
       },
     ],
   });
@@ -56,5 +64,6 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     res.render('login')
   })
 });
+
 
 module.exports = router;
