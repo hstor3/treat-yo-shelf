@@ -245,3 +245,29 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+.list-display-card {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.list-img {
+  margin: 10px;
+}
+
+.list-title {
+  color: white;
+}
+
+.list-author {
+  color: white;
+}
+
+.list-description {
+  color: white;
+}
