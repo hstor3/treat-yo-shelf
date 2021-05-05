@@ -85,4 +85,10 @@ router.get('/recommended', withAuth, async (req, res) => {
   })
 });
 
+router.get('/about', withAuth, async (req, res) => {
+  res.render('about', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
 module.exports = router;

@@ -7,13 +7,16 @@ const searchDb = async (event) => {
   let finalResults = {};
 
   if (fullSearch) {
-    await fetch("https://openlibrary.org/search.json?q=" + fullSearch)
+    // only search for title
+    await fetch("https://openlibrary.org/search.json?title=" + fullSearch)
       .then((response) => {
         return response.json();
       })
       .then((responseData) => {
         finalResults = responseData.docs;
         console.log(finalResults);
+        // for loop to only fetch 10 books?
+        // append to a premade html 
         finalResults.map((result) => {
           $("#searchResultsSection").append(`
   <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
@@ -30,6 +33,7 @@ const searchDb = async (event) => {
       .catch((err) => {
         console.log("fetch error" + err);
       });
+// 
   }
 };
 
