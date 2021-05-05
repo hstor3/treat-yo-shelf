@@ -28,6 +28,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
+  z-index: 1;
+  overflow-x: hidden;
 }
 
 .hamburger {
@@ -56,6 +58,11 @@
   bottom: 0;
   left: 0;
   height: 460px;
+}
+
+.nav-list ul {
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .nav-list.show {
@@ -232,6 +239,17 @@
 }
 
 /* Search page */
+.searchbar {
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
 .searchbar input {
   width: 80%;
   font-size: 18px;
@@ -257,23 +275,34 @@
   margin: 10px;
   background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
   border-radius: 12px;
-  padding: 22px;
+  padding: 5px;
+  overflow-x: hidden;
 }
 
 .search-img {
-  margin: 10px;
+  /* margin: 10px; */
+  min-width: 85%;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 .search-title {
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-author {
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-description {
   color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 /* list page */
