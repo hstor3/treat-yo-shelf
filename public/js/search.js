@@ -38,3 +38,18 @@ const searchDb = async (event) => {
 };
 
 $(".search-form").on("submit", searchDb);
+
+
+  // function to append/get the search results to the lists
+  
+function searchHistory() {
+    // debugger
+    searches = JSON.parse(localStorage.getItem('searches') || '[]');
+    for (let i = 0; i < searches.length; i++) {
+      let recent = $('<div class="search">').text(searches[i]);
+      $('.search-history').append(recent);
+      document.getElementById('search-result').innerHTML = localStorage.getItem('searches');
+    }
+  };
+  
+  searchHistory();
