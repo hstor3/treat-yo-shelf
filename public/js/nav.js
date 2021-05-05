@@ -19,3 +19,11 @@ let navList = document.getElementById('nav-list');
 function openHam() {
     navList.style.display = 'flex';
 }
+
+// function to close hamburger menu if user clicks outside of modal
+function clickOutside(e) {
+    if (e.target == navList) {
+        navList.style.display = 'none';
+    }
+
+}
