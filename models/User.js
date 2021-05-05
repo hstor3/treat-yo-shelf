@@ -21,7 +21,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
-    }
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,18 +35,6 @@ User.init(
       },
     },
   },
-
-  // ! TODO: link models
-  User.associate = models => {
-    User.hasMany(models.orders, {
-      onDelete: 'cascade'
-    })
-    User.hasMany(models.cart_items, {
-      foreignKey: { name: 'UserId', allowNull: false },
-      onDelete: 'cascade'
-    })
-  } //! TODO: add comma? 
-
   {
     hooks: {
       beforeCreate: async (newUserData) => {

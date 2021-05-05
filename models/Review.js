@@ -27,10 +27,6 @@ Review.init(
     comment: {
       type: DataTypes.TEXT
     },
-
-    FOREIGN KEY(user) REFERENCES user(id),
-    FOREIGN KEY(book) REFERENCES book(id)
-
   },
   {
     sequelize,

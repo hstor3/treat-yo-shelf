@@ -21,9 +21,6 @@ Content.init(
     shelf_position: {
       type: DataTypes.INTEGER,
       allowNull: false,
-
-      FOREIGN KEY(list_id) REFERENCES list(id),
-      FOREIGN KEY(book_id) REFERENCES book(id)
     }
   },
   {

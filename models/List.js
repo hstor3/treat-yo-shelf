@@ -15,12 +15,10 @@ List.init(
       autoIncrement: true,
     },
     list_name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     user: {
-      type: DataTypes.STRING
-
-            FOREIGN KEY(user) REFERENCES user(user_id)
+      type: DataTypes.STRING,
     }
   },
   {
