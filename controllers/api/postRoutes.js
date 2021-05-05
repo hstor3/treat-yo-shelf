@@ -2,13 +2,13 @@ const router = require("express").Router();
 const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get('/post/:id/comments', withAuth, async (req, res) => {
-  res.render('comments', {
+router.get('/search/:id/comments', withAuth, async (req, res) => {
+  res.render('search', {
     loggedIn: req.session.loggedIn
   })
 });
 
-router.get('post/comments/:id', async (req, res) => {
+router.get('search/comments/:id', async (req, res) => {
   const commentContent = await Comment.findByPk(req.params.id, {
     include: [
       {
@@ -37,7 +37,7 @@ router.post('/:id/comment', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  Post.create({
+  Comment.create({
     body: req.body.body,
     title: req.body.title,
     userId: req.session.userId
