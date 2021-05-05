@@ -44,12 +44,12 @@ $(".search-form").on("submit", searchDb);
   
 function searchHistory() {
     // debugger
-    searches = JSON.parse(localStorage.getItem('searches') || '[]');
+    searches = JSON.parse(localStorage.getItem('searches'));
     for (let i = 0; i < searches.length; i++) {
-      let recent = $('<div class="search">').text(searches[i]);
-      $('.search-history').append(recent);
-      document.getElementById('search-result').innerHTML = localStorage.getItem('searches');
-    }
+      let recent = $('<li class=finalResults>').text(searches[i]);
+      $('.search-result').append(recent);
+      // document.getElementById('search-result').innerHTML = localStorage.getItem('searches');
+  }
   };
   
   searchHistory();
