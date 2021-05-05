@@ -239,6 +239,14 @@
 }
 
 /* Search page */
+.header-text-search {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 16px;
+}
+
 .searchbar {
   width: 100%;
   font-size: 18px;
@@ -310,7 +318,7 @@
   color: white;
   font-size: 25px;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 37px;
   margin-bottom: 16px;
 }
 
