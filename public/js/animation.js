@@ -1,5 +1,5 @@
 gsap.fromTo(".top-logout-btn", { opacity: 0, scale: 0 },
-    { opacity: 1, scale: 1, duration: 2.5 });
+    { opacity: 1, scale: 1, duration: 2 });
 // home pg
 gsap.fromTo(".logo-home", { opacity: 0, y: -25, scale: 0 },
     { opacity: 1, y: 0, scale: 0, duration: 2.5 });
@@ -28,5 +28,9 @@ gsap.fromTo(".searchCard", { opacity: 0, y: 50, scale: 0 },
     { opacity: 1, y: 0, scale: 1, duration: 2.5 });
 
 // list
+gsap.fromTo(".header-text-list", { opacity: 0, y: -25, scale: 0 },
+    { opacity: 1, y: 0, scale: 1, duration: 2.5 });
 
 // Recommended 
+gsap.fromTo(".header-text-recommended", { opacity: 0, y: -25, scale: 0 },
+    { opacity: 1, y: 0, scale: 1, duration: 2.5 });

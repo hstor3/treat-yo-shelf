@@ -348,6 +348,15 @@
   color: white;
 }
 
+/* recommended */
+.header-text-recommended {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 16px;
+}
+
 /* about us page */
 .dev-info {
   color: white;
