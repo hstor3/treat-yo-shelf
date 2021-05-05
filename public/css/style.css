@@ -339,3 +339,10 @@
 .list-description {
   color: white;
 }
+
+/* about us page */
+.dev-info {
+  color: white;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+}
