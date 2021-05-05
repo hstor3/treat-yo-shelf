@@ -13,11 +13,11 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
+      allowNull: false,
       autoIncrement: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
@@ -27,7 +27,7 @@ User.init(
       allowNull: false,
       unique: true
     },
-    password: {
+    userpass: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -35,6 +35,18 @@ User.init(
       },
     },
   },
+
+  // ! TODO: link models
+  User.associate = models => {
+    User.hasMany(models.orders, {
+      onDelete: 'cascade'
+    })
+    User.hasMany(models.cart_items, {
+      foreignKey: { name: 'UserId', allowNull: false },
+      onDelete: 'cascade'
+    })
+  } //! TODO: add comma? 
+
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -47,7 +59,7 @@ User.init(
       },
     },
     sequelize,
-    // timestamps: true,
+    timestamps: true,
     // freezeTableName: true,
     modelName: "User",
   }
