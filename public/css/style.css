@@ -358,8 +358,49 @@
 }
 
 /* about us page */
+.dev-holder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 39px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
 .dev-info {
   color: white;
   background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
   border-radius: 12px;
+  width: 95%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 39px;
+  text-decoration: none;
+  text-align: center;
+  flex-direction: row;
+}
+
+.dev-icons{
+  color: white;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev-info i {
+  color: white;
+  font-size: 40px;
+  margin: 5px;
+  flex-direction: row;
+}
+
+.dev-info h4 {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  text-decoration: none;
 }
