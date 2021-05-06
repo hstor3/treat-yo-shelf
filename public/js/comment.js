@@ -1,9 +1,9 @@
 // const createComment = async (e) => {
 //     e.preventDefault();
 
-//     // add a query selector
+// //     // add a query selector
 //     const postId = document.querySelector('').value.trim();
-//     conse commentBody = document.querySelector('').value.trim();
+//     const commentBody = document.querySelector('').value.trim();
 
 //     if (commentBody) {
 //         const response = await fetch(`/api/posts/${id}/comment`, {
@@ -19,6 +19,6 @@
 // };
 
 // let commentButton = document.querySelector('');
-// if (commentBody) {
+// if (commentButton) {
 //     commentButton.addEventListener('click', createComment)
 // }
