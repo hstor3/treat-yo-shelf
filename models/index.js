@@ -1,36 +1,32 @@
 const User = require("./User");
-const Post = require("./Post");
-const Comment = require("./Comment");
+const Book = require("./Book");
+const Content = require("./Content");
+const List = require("./List");
+const Review = require("./Review");
 
-User.hasMany(Post, {
-  foreignKey: "userId",
-  onDelete: "CASCADE",
+// User to List
+List.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-User.hasMany(Comment, {
-  foreignKey: "userId",
-  onDelete: "CASCADE",
+// User to Review
+Review.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-Post.hasMany(Comment, {
-  foreignKey: "postId",
-  onDelete: "CASCADE",
+// List to Content
+Content.belongsTo(List, {
+  foreignKey: 'list_id',
 });
 
-Post.belongsTo(User, {
-  foreignKey: "userId",
+// Content to Book
+Content.hasMany(Book, {
+  foreignKey: 'book_id',
+})
+
+// Book to Review
+Book.hasMany(Review, {
+  foreignKey: 'review_id',
 });
 
-Comment.belongsTo(User, {
-  foreignKey: "userId",
-});
-
-Comment.belongsTo(Post, {
-  foreignKey: "postId",
-});
-
-module.exports = {
-  User,
-  Post,
-  Comment,
-};
+module.exports = { User, Book, Content, List, Review };

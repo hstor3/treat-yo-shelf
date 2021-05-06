@@ -1,7 +1,7 @@
 /* eslint-disable require-atomic-updates */
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -11,17 +11,23 @@ class User extends Model {
 
 User.init(
   {
-    id: {
+    user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
+      allowNull: false,
       autoIncrement: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
-    password: {
+    userpass: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -41,9 +47,8 @@ User.init(
       },
     },
     sequelize,
-    // timestamps: false,
+    timestamps: true,
     // freezeTableName: true,
-    // underscored: true,
     modelName: "User",
   }
 );
