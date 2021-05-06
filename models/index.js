@@ -5,25 +5,16 @@ const List = require("./List");
 const Review = require("./Review");
 
 // User to List
-User.hasOne(List, {
-  //! TODO
-});
 List.belongsTo(User, {
-  foreignKey: 'id',
+  foreignKey: 'user_id',
 });
 
 // User to Review
-User.hasMany(Review, {
-  //! TODO
-});
 Review.belongsTo(User, {
-  foreignKey: 'id',
+  foreignKey: 'user_id',
 });
 
 // List to Content
-List.hasMany(Content, {
-  //! TODO
-});
 Content.belongsTo(List, {
   foreignKey: 'list_id',
 });
@@ -35,10 +26,7 @@ Content.hasMany(Book, {
 
 // Book to Review
 Book.hasMany(Review, {
-  //! TODO
-});
-Review.belongsTo(Book, {
-  //! TODO
+  foreignKey: 'review_id',
 });
 
 module.exports = { User, Book, Content, List, Review };

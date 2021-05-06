@@ -8,7 +8,7 @@ class List extends Model { }
 
 List.init(
   {
-    id: {
+    list_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,

@@ -8,7 +8,7 @@ class Content extends Model { }
 
 Content.init(
   {
-    list_id: {
+    content_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
