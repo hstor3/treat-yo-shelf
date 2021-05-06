@@ -1,36 +1,58 @@
 const User = require("./User");
-const Post = require("./Post");
+// const Post = require("./Post");
+const Book = require("./Book")
 const Comment = require("./Comment");
 
-User.hasMany(Post, {
-  foreignKey: "userId",
-  onDelete: "CASCADE",
-});
+// User.hasMany(Post, {
+//   foreignKey: "userPostId",
+//   onDelete: "CASCADE",
+// });
 
 User.hasMany(Comment, {
-  foreignKey: "userId",
+  foreignKey: "userCommentId",
   onDelete: "CASCADE",
 });
 
-Post.hasMany(Comment, {
-  foreignKey: "postId",
+User.hasMany(Book, {
+  foreignKey: "userBookId",
   onDelete: "CASCADE",
 });
 
-Post.belongsTo(User, {
-  foreignKey: "userId",
+// Post.hasMany(Comment, {
+//   foreignKey: "postCommentId",
+//   onDelete: "CASCADE",
+// });
+
+// Post.belongsTo(User, {
+//   foreignKey: "postUserId",
+// });
+
+// Comment.belongsTo(User, {
+//   foreignKey: "commentUserId",
+// });
+
+// Comment.belongsTo(Post, {
+//   foreignKey: "commentPostId",
+// });
+
+Comment.belongsTo(Book, {
+  foreignKey: "commentBookId",
+  onDelete: "CASCADE"
 });
 
-Comment.belongsTo(User, {
-  foreignKey: "userId",
+Book.hasMany(Comment, {
+  foreignKey: "bookCommentId",
+  onDelete: "CASCADE"
 });
 
-Comment.belongsTo(Post, {
-  foreignKey: "postId",
-});
+// Book.belongsToMany(User, {
+//   foreignKey: "bookUserId",
+//   onDelete: "CASCADE"
+// });
 
 module.exports = {
   User,
-  Post,
+  // Post,
   Comment,
+  Book
 };

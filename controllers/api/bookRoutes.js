@@ -1,9 +1,9 @@
-// const router = require("express").Router();
-// const { Post } = require("../../models");
-// const withAuth = require("../../utils/auth");
+const router = require("express").Router();
+const { Book } = require("../../models");
+const withAuth = require("../../utils/auth");
 
-// router.get('/search/:id/comments', withAuth, async (req, res) => {
-//   res.render('search', {
+// router.get('/search/:id/comments', withAuth, (req, res) => {
+//   res.render('lists', {
 //     loggedIn: req.session.loggedIn
 //   })
 // });
@@ -12,29 +12,39 @@
 //   const commentContent = await Comment.findByPk(req.params.id, {
 //     include: [
 //       {
-//         model: Post,
+//         model: Book,
 //         attributes: ['id'],
 //       },
 //     ],
 //   });
 //   const comments = commentContent.get({ plain: true });
-//   res.render('comments', {
+//   res.render('lists', {
 //     comments,
 //     loggedIn: req.session.loggedIn
 //   })
 // });
 
-// router.post('/:id/comment', (req, res) => {
-//   Comment.create({
-//     body: req.body.body,
-//     postId: req.params.id,
-//     userId: req.session.userId,
-//   }).then((newComment) => {
-//     res.status(200).json(newComment)
-//   }).then(() => {
-//     res.redirect('/')
-//   })
-// });
+router.post('/', (req, res) => {
+  console.log(req);
+  Book.create({
+    title: req.body.title,
+    author: req.body.author
+  }).then((addBook) => {
+    res.status(200).json(addBook)
+  })
+  //   include: [
+  //     {
+  //       model: Book,
+  //       attributes: ['id'],
+  //     },
+  //   ],
+  // });
+  // const book = bookData.get({ plain: true });
+  // res.render('lists', {
+  //   book,
+  //   loggedIn: req.session.loggedIn
+  // })
+});
 
 // router.post('/', (req, res) => {
 //   Comment.create({
@@ -72,4 +82,4 @@
 //     })
 // });
 
-// module.exports = router;
+module.exports = router;
