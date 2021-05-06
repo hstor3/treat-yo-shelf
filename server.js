@@ -25,6 +25,7 @@ const currentSession = {
 
 app.use(session(currentSession));
 
+// using handlebars
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 

@@ -1,42 +1,40 @@
 /* eslint-disable require-atomic-updates */
+
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Book extends Model { }
+class Review extends Model { }
 
-Book.init(
+Review.init(
   {
+    review_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
+    user: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    author: {
-      type: DataTypes.STRING,
+    book_id: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    cover: {
-      type: DataTypes.STRING
+    rating: {
+      type: DataTypes.INTEGER
     },
-    genre: {
-      type: DataTypes.STRING
-    },
-    summary: {
+    comment: {
       type: DataTypes.TEXT
-    }
+    },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     // underscored: true,
-    modelName: "book",
+    modelName: "Review",
   }
 );
 
-module.exports = Book;
-    book_id: {
+module.exports = Review;

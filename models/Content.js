@@ -1,32 +1,26 @@
 /* eslint-disable require-atomic-updates */
+
+// Bookshelf
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Book extends Model { }
+class Content extends Model { }
 
-Book.init(
+Content.init(
   {
+    content_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false
+    book_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    author: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    cover: {
-      type: DataTypes.STRING
-    },
-    genre: {
-      type: DataTypes.STRING
-    },
-    summary: {
-      type: DataTypes.TEXT
+    shelf_position: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
   },
   {
@@ -34,9 +28,8 @@ Book.init(
     timestamps: false,
     freezeTableName: true,
     // underscored: true,
-    modelName: "book",
+    modelName: "Content",
   }
 );
 
-module.exports = Book;
-    book_id: {
+module.exports = Content;
