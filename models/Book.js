@@ -6,7 +6,6 @@ class Book extends Model { }
 
 Book.init(
   {
-    book_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
@@ -40,3 +39,4 @@ Book.init(
 );
 
 module.exports = Book;
+    book_id: {

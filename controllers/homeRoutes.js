@@ -1,44 +1,45 @@
 const router = require("express").Router();
-const { Post, User, Comment } = require("../models");
+const { User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
-  const postInfo = await Post.findAll({
-    include: [
-      {
-        model: User,
-        attributes: ["email"],
-      },
-    ],
-  });
-  const posts = postInfo.map((post) => post.get({ plain: true }));
-  res.render("homepage", {
-    posts,
-    loggedIn: req.session.loggedIn,
-  });
-});
+// router.get("/", async (req, res) => {
+//   const postInfo = await Book.findAll({
+//     include: [
+//       {
+//         model: User,
+//         attributes: ["email"],
+//       },
+//     ],
+//   });
+//   const posts = postInfo.map((post) => post.get({ plain: true }));
+//   res.render("homepage", {
+//     posts,
+//     loggedIn: req.session.loggedIn,
+//   });
+// });
 
-router.get("/posts", async (req, res) => {
+router.get("/lists", async (req, res) => {
   // alert();
   console.log("hey");
-  res.render("posts", {
+  res.render("lists", {
     loggedIn: req.session.loggedIn,
   });
 });
 
-router.get('/posts/:id', withAuth, async (req, res) => {
-  const postId = await Post.findByPk(req.params.userId, {
+router.get('/lists/:id', withAuth, async (req, res) => {
+  const bookId = await Post.findByPk(req.params.userId, {
     include: [
       {
-        model: User,
-        attributes: ["id"],
+        model: Book,
+        attributes: ["userid"],
       },
     ],
   });
 
-  const post = postId.get({ plain: true });
-  res.render('homepage', {
-    post,
+  const books = bookId.get({ plain: true });
+  console.log(books)
+  res.render('lists', {
+    books,
     loggedIn: req.session.loggedIn
   })
 });
@@ -67,26 +68,32 @@ router.get('homepage', withAuth, async (req, res) => {
     res.render('login')
   })
 
-router.get('/search', withAuth, async (req, res) => {
+router.get('/search', withAuth, (req, res) => {
   res.render('search', {
     loggedIn: req.session.loggedIn
   })
 });
 
-router.get('/lists', withAuth, async (req, res) => {
+router.get('/lists', withAuth, (req, res) => {
   res.render('lists', {
     loggedIn: req.session.loggedIn
   })
 });
 
-router.get('/recommended', withAuth, async (req, res) => {
+router.get('/recommended', withAuth, (req, res) => {
   res.render('recommended', {
     loggedIn: req.session.loggedIn
   })
 });
 
-router.get('/about', withAuth, async (req, res) => {
+router.get('/about', withAuth, (req, res) => {
   res.render('about', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.get('/', withAuth, (req, res) => {
+  res.render('homepage', {
     loggedIn: req.session.loggedIn
   })
 });
