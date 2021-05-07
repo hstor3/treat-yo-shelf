@@ -1,5 +1,5 @@
 
-# :sparkles: Treat Yo'Shelf! :sparkles:
+# :books: Treat Yo'Shelf! :books:
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen) ![badge](https://img.shields.io/github/repo-size/hstor3/treat-yo-shelf)
 
