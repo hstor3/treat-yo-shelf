@@ -294,6 +294,7 @@
 .search-img {
   /* margin: 10px; */
   max-width: 85%;
+  min-width: 75%;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
