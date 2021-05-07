@@ -1,19 +1,20 @@
 {{!-- saved books will be saved here --}}
-<div class="header-text-list">
-  <h1>MY LIST
-{{!-- {{books}} --}}
+<div class="list-pg">
+  <div class="header-text-list">
+    <h1>MY LIST
+      {{!-- {{books}} --}}
 
-  </h1>
-  {{!-- {{book.title}}{{book.author}} --}}
-</div>
+    </h1>
+    {{!-- {{book.title}}{{book.author}} --}}
+  </div>
 
-<div class="search-result" id="search-result">
-{{#each books as |book|}}
-  <p class="list-description">Description paragraphs words go here</p>
-{{!-- </div> --}}
-<div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
-<button class="bookDeleter" data-id={{book_id}}>Delete</button>
-{{!-- 
+  <div class="search-result" id="search-result">
+    {{#each books as |book|}}
+    <p class="list-description">Description paragraphs words go here</p>
+    {{!-- </div> --}}
+    <div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
+    <button class="bookDeleter" data-id={{book_id}}>Delete</button>
+    {{!-- 
     <div class="comments">
       <label for="comment-title">Add comments here!</label>
       <input class="comment-input" />
@@ -22,7 +23,8 @@
       </div>
     </div> --}}
 
-{{/each}}
+    {{/each}}
+  </div>
 </div>
 {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
 <script src="/js/book.js"></script>

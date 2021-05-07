@@ -17,7 +17,7 @@
   font-size: 54px;
   flex-direction: column;
   padding: 22px 0px;
-  
+  background-image: linear-gradient(to bottom left, var(--blue-l), var(--blue), var(--blue-d));
 }
 
 .nav-list {
@@ -36,6 +36,12 @@
 }
   
   /* Homepage */
+.home-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
 .logo-home {
   padding: 115px;
   margin-top: 19px;
@@ -53,6 +59,189 @@
   border-radius: 12px;
   padding: 22px;
   width: 85%;
+}
+/* Login page */
+.login-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.logo-login {
+  width: 100%;
+  padding: 77px;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  /* background-image: inherit; */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+}
+
+.header-text-login {
+  margin-bottom: 16px;
+}
+
+.header-text-login h1 {
+  font-size: 50px;
+}
+
+.header-text-login h3 {
+  font-size: 43px;
+  margin-top: 10px;
+}
+
+.login-form {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8%;
+}
+
+.login-container input {
+  font-size: 18px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn-sub {
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.signup-form {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8%;
+}
+
+.signup-btn-sub {
+  padding: 20px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+/* Search page */
+.search-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.header-text-search {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 16px;
+}
+
+.searchbar {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.searchbar input {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 12px;
+  /* margin: 20px 50px 20px 55px; */
+}
+
+.search-btn {
+  font-size: 45px;
+}
+
+.search-display-card {
+  font-size: 25px;
+  /* margin: 3% 10% 10% 13%; */
+  border-radius: 12px;
+  padding: 15px 5px;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-img {
+  max-width: 65%;
+  margin: 22px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.search-title {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.search-author {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.list-add {
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  color: white;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 25 10px;
+  border: none;
+}
+
+.search-description {
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+/* list page */
+.list-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+/* recommended */
+.recommended-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+/* about us page */
+.about-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
 }
 
 }
