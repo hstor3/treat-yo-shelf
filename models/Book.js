@@ -2,32 +2,33 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Book extends Model { }
+class Book extends Model {}
 
-Book.init({
-  // book_id: {
-  //     type: DataTypes.INTEGER,
-  //     primaryKey: true,
-  //     allowNull: false,
-  //     autoIncrement: true,
-  //   },
+Book.init(
+  {
+    book_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true,
+    },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     cover: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     genre: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     summary: {
-      type: DataTypes.TEXT
-    }
+      type: DataTypes.TEXT,
+    },
   },
   {
     sequelize,
