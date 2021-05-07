@@ -18,7 +18,21 @@ router.get("/books", async (req, res) => {
   });
 });
 
-router.post("/", (req, res) => {
+// router.get('/books/:id', async (req, res) => {
+//   const bookData = await Book.findByPk(req.params.id, {
+//     include: [
+//       {
+//         model: Book,
+//         attributes: ['id'],
+//       },
+//     ],
+//   });
+
+//   const book = bookData.get({ plain: true });
+
+// })
+
+router.post('/', (req, res) => {
   // console.log(req);
   Book.create({
     title: req.body.title,
@@ -39,7 +53,8 @@ router.put("/:id", (req, res) => {
   res.render("lists");
 });
 
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
+  console.log('delete route')
   Book.destroy({
     where: {
       book_id: req.params.id,
