@@ -289,6 +289,8 @@
   border-radius: 12px;
   padding: 15px 5px;
   overflow-x: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .search-img {
@@ -298,6 +300,9 @@
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .search-title {
@@ -305,6 +310,8 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-author {
@@ -312,6 +319,8 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .list-add {
@@ -321,6 +330,8 @@
   margin: 10px;
   padding: 10px;
   border: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-description {
@@ -382,6 +393,14 @@
   margin-top: 39px;
   margin-bottom: 30px;
   position: relative;
+}
+
+.dev-header-text{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 16px;
 }
 
 .dev-info {
