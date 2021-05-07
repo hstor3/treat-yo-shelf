@@ -258,6 +258,8 @@
   border: none;
   padding: 12px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: row;
 }
@@ -270,6 +272,8 @@
   padding: 12px;
   margin: 20px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-btn {

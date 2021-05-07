@@ -36,6 +36,12 @@
 }
   
   /* Homepage */
+.home-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
 .logo-home {
   padding: 115px;
   margin-top: 19px;
@@ -66,31 +72,21 @@
 
 .searchbar {
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 8px;
-  border: none;
   padding: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
 }
 
 .searchbar input {
-  width: 80%;
-  font-size: 18px;
+  width: 100%;
+  font-size: 20px;
   border-radius: 8px;
-  border: none;
   padding: 12px;
-  margin: 20px;
-  text-align: center;
+  margin: 20px 50px 20px 55px;
 }
 
 .search-btn {
-  color: white;
-  font-size: 30px;
-  background: none;
-  border: none;
-  align-items: center;
+  font-size: 45px;
 }
 
 .search-display-card {
@@ -104,8 +100,7 @@
 }
 
 .search-img {
-  /* margin: 10px; */
-  max-width: 85%;
+  max-width: 65%;
   margin: 22px;
   margin-bottom: 25px;
   align-items: center;
@@ -132,6 +127,7 @@
   border-radius: 12px;
   color: white;
   margin: 10px;
+  margin-top: 30px;
   padding: 25 10px;
   border: none;
 }
