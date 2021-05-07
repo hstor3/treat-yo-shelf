@@ -69,16 +69,16 @@ $(".search-form").on("submit", searchDb);
 
 // function to append/get the search results to the lists
 
-function searchHistory() {
-  console.log("search history function");
-  searches = JSON.parse(localStorage.getItem("searches"));
-  console.log(searches);
-  for (let i = 0; i < searches.length; i++) {
-    let recent = $("<li class=finalResults>").text(searches[i]);
-    $(".search-result").append(recent);
-    console.log(recent);
-  }
-}
+// function searchHistory() {
+//   console.log("search history function");
+//   searches = JSON.parse(localStorage.getItem("searches"));
+//   console.log(searches);
+//   for (let i = 0; i < searches.length; i++) {
+//     let recent = $("<li class=finalResults>").text(searches[i]);
+//     $(".search-result").append(recent);
+//     console.log(recent);
+//   }
+// }
 
 const appendBook = async (e) => {
   e.preventDefault();
