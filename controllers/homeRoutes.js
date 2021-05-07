@@ -12,7 +12,6 @@ router.get("/lists/:id", async (req, res) => {
   });
 
   const books = bookId.get({ plain: true });
-  // console.log(books);
   res.render("lists", {
     books,
     loggedIn: req.session.loggedIn,
@@ -64,7 +63,6 @@ router.get("/lists", async (req, res) => {
       return book.get({
         plain: true })
     })
-  // console.log(books)
   res.render("lists", {
     books,
     loggedIn: req.session.loggedIn
