@@ -62,6 +62,12 @@
 }
 
 /* Search page */
+.search-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
 .header-text-search {
   color: white;
   font-size: 35px;
@@ -82,7 +88,7 @@
   font-size: 20px;
   border-radius: 8px;
   padding: 12px;
-  margin: 20px 50px 20px 55px;
+  /* margin: 20px 50px 20px 55px; */
 }
 
 .search-btn {
