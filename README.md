@@ -35,7 +35,7 @@ To install: <code>node index.js</code>
     <td>Home</td><td>Search</td><td>List</td>
   </tr>
   <tr style="vertical-align:top">
-    <td style="vertical-align:top"> <img src="assets/home-page.png"> </td><td style="vertical-align:top"> <img src="assets/search-page.png"> </td><td style="vertical-align:top"> <img src="assets/list-page.png"> </td>
+    <td style="vertical-align:top"> <img src="assets/home-page.png"> </td><td style="vertical-align:top"> <img src="assets/search-result-page.png"> </td><td style="vertical-align:top"> <img src="assets/list-page.png"> </td>
   </tr>
  </table>
 
