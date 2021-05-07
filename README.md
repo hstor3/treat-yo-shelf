@@ -5,19 +5,24 @@
 
 ## 📖 Table of Contents
 - [Description](#description)
+- [Challenges](#challenges)
 - [Installation](#install)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Tests](#tests)
 - [License](#license)
 
 ## 🔍 Description <a name="description"></a>
+Want to organize your book collections but don’t want to use Goodreads?
+
+Many people have been looking for alternate solutions to Goodreads ever since it was acquired by Amazon.
+
+We’ve created a user-friendly app that lets you organize your books and treat your bookshelf!
+
+## ⛰️ Challenges <a name="challenges"></a>
 
 
 ## 💾 Installation <a name="install"></a>
 To install: <code>node index.js</code>
-
-## 💻 Usage <a name="usage"></a>
 
 
 ## 🖼️ Screenshots <a name="screenshots"></a>
