@@ -3,16 +3,18 @@
     Search
   </h1>
 </div>
-
 <div class="searchbar center">
   <form class="search-form">
-    <input class="form-input" type="text" autocomplete="search" placeholder="Search for your favorite book"
-      id="searchTerm" />
+    <input
+      class="form-input"
+      type="text"
+      autocomplete="search"
+      placeholder="Search for your favorite book"
+      id="searchTerm"
+    />
     <button class="search-btn" type="submit">
       <i class="fas fa-search"></i>
     </button>
   </form>
 </div>
-
-<div rv-unless="searchResults" rv-each-searchCard="results" class="searchCard search-display-card"
-  id="searchResultsSection"></div>
+<div class="searchCard search-display-card" id="searchResultsSection"></div>
