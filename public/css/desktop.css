@@ -223,4 +223,25 @@
   justify-content: center;
 }
 
+/* list page */
+.list-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+/* recommended */
+.recommended-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+/* about us page */
+.about-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
 }
