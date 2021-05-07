@@ -1,6 +1,5 @@
 const loginForm = async (e) => {
   e.preventDefault();
-  console.log("hello");
   const username = document.querySelector("#user-input").value.trim();
   const password = document.querySelector("#pass-input").value.trim();
 
@@ -10,10 +9,9 @@ const loginForm = async (e) => {
       body: JSON.stringify({ username: username, password: password }),
       headers: { "Content-Type": "application/json" },
     });
-    // console.log(response);
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/account");
     } else {
       alert(response.statusText);
     }
@@ -23,8 +21,8 @@ const loginForm = async (e) => {
 const signup = async (e) => {
   e.preventDefault();
 
-  const username = document.querySelector(".userInput").value.trim();
-  const password = document.querySelector(".passInput").value.trim();
+  const username = document.querySelector("#user-input").value.trim();
+  const password = document.querySelector("#pass-input").value.trim();
 
   if (username && password) {
     const response = await fetch("/api/users", {
@@ -34,7 +32,7 @@ const signup = async (e) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/account");
     } else {
       alert(response.statusText);
     }
