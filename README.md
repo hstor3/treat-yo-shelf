@@ -1,7 +1,7 @@
 
 # :sparkles: Treat Yo'Shelf! :sparkles:
 
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+![badge](https://img.shields.io/badge/license-MIT-brightgreen) ![badge](https://img.shields.io/github/repo-size/hstor3/treat-yo-shelf)
 
 ## 📖 Table of Contents
 - [Description](#description)
@@ -40,4 +40,4 @@ No tests are available at this time.
 This application is covered by the [MIT license](LICENSE.md). 
 
 ## ❤️ Credits <a name="credits"></a>
-* Parks & Recreation for the app name
+* App name inspired by Parks & Recreation
