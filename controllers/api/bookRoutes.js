@@ -18,19 +18,19 @@ router.get("/books", async (req, res) => {
   });
 });
 
-// router.get('/books/:id', async (req, res) => {
-//   const bookData = await Book.findByPk(req.params.id, {
-//     include: [
-//       {
-//         model: Book,
-//         attributes: ['id'],
-//       },
-//     ],
-//   });
+router.get('/books/:id', async (req, res) => {
+  const bookData = await Book.findByPk(req.params.id, {
+    include: [
+      {
+        model: Book,
+        attributes: ['id'],
+      },
+    ],
+  });
 
-//   const book = bookData.get({ plain: true });
+  const book = bookData.get({ plain: true });
 
-// })
+})
 
 router.post('/', (req, res) => {
   // console.log(req);
@@ -38,7 +38,8 @@ router.post('/', (req, res) => {
     title: req.body.title,
     author: req.body.author,
   }).then((addBook) => {
-    res.status(200).json(addBook);
+    // res.status(200).json(addBook);
+    res.redirect('/lists')
   });
 });
 
