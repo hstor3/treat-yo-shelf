@@ -3,7 +3,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Review extends Model { }
+class Review extends Model {}
 
 Review.init(
   {
@@ -15,17 +15,17 @@ Review.init(
     },
     user: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     book_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     rating: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
     },
     comment: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
     },
   },
   {
