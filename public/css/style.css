@@ -303,12 +303,23 @@
   color: white;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
 
 .search-author {
   color: white;
   align-items: center;
   justify-content: center;
+  margin: 10px;
+}
+
+.list-add {
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border: none;
 }
 
 .search-description {

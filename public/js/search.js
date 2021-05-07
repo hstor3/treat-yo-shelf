@@ -21,20 +21,21 @@ const searchDb = async (event) => {
           if (index < 10) {
             $("#searchResultsSection").append(`
               <form action="/api/books" method="POST">
-                <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
+                
                 <h1 class="search-title">
-                    <label for="">Title</label>
+                    <label for=""></label>
                     <input name="title" type="hidden" value="${result.title}">
                     <div>${result.title}</div>
                 </h1>
                 <h3 class="search-author">
                   <label for="">
-                      Author:
+                      
                   </label>
                   <input type="hidden" name="author" value="${result.author_name}">
                   <div>${result.author_name}</div>
                 </h3><br>
-                <button type="submit" class="list-add" id="list-books">Add to my list</button><br>
+                <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
+                <button type="submit" class="list-add" id="list-books">Add to my List</button><br>
               </form>`);
           }
         });
