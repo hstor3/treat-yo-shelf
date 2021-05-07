@@ -14,6 +14,11 @@ Review.belongsTo(User, {
   foreignKey: "user_id",
 });
 
+Review.belongsTo(Book, {
+  foreignKey: 'bookId',
+  onDelete: 'CASCADE'
+})
+
 // // List to Content
 // Content.belongsTo(List, {
 //   foreignKey: 'list_id',

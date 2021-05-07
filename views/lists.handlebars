@@ -1,30 +1,35 @@
-{{!-- saved books will be saved here --}}
 <div class="list-pg">
   <div class="header-text-list">
-    <h1>MY LIST
-      {{!-- {{books}} --}}
-
-    </h1>
-    {{!-- {{book.title}}{{book.author}} --}}
+    <h1>MY LIST</h1>
   </div>
 
   <div class="search-result" id="search-result">
     {{#each books as |book|}}
+    {{!-- displays to book title and author --}}
     <p class="list-description">Description paragraphs words go here</p>
-    {{!-- </div> --}}
     <div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
     <button class="bookDeleter" data-id={{book_id}}>Delete</button>
-    {{!-- 
-    <div class="comments">
-      <label for="comment-title">Add comments here!</label>
-      <input class="comment-input" />
-      <div class="comment">
-        <button class="btn btn-primary" id="confirm-comment" type="submit">Comment!</button>
-      </div>
-    </div> --}}
-
-    {{/each}}
+    
   </div>
+
+  {{!-- this routes correctly but isn't being displayed correctly --}}
+  <form action='/api/books/{{book.book_id}}/reviews' method='POST'>
+      <div class="review">
+      <label for="review-title">Add reviews here!</label>
+      <input name='review' class="review-input" />
+      {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
+      <div class="review">
+        <button class="btn btn-primary" id="confirm-review" type="submit">review!</button>
+      </div>
+    </div>
+  </form>
+    {{/each}}
+
+{{!-- this may or may not be part of the problem.. --}}
+    {{#each book.Review as |review| }}
+    <div class="posted-reviews">{{review.body}}</div>
+    {{/each}}
 </div>
-{{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
+<input type="hidden" value={{book_id}} id="book_value" />
 <script src="/js/book.js"></script>
+<script src="/js/review.js"></script>

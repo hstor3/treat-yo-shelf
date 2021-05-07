@@ -10,7 +10,7 @@ const loginForm = async (e) => {
       body: JSON.stringify({ username: username, password: password }),
       headers: { "Content-Type": "application/json" },
     });
-    console.log(response);
+    // console.log(response);
 
     if (response.ok) {
       document.location.replace("/");

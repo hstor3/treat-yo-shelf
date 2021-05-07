@@ -52,17 +52,17 @@ const searchDb = async (event) => {
       }
     }
 
-    // function searchHistory() {
-    //   console.log("search history function");
-    //   const searches = JSON.parse(localStorage.getItem("searches"));
-    //   console.log(searches);
-    //   for (let i = 0; i < searches.length; i++) {
-    //     let recent = $("<li class=finalResults>").text(searches[i]);
-    //     $(".search-result").append(recent);
-    //     console.log(recent);
-    //   }
-    // }
-    // searchHistory();
+    function searchHistory() {
+      console.log("search history function");
+      const searches = JSON.parse(localStorage.getItem("searches"));
+      console.log(searches);
+      for (let i = 0; i < searches.length; i++) {
+        let recent = $("<li class=finalResults>").text(searches[i]);
+        $(".search-result").append(recent);
+        // console.log(recent);
+      }
+    }
+    searchHistory();
     appendResults();
   }
 };
@@ -88,7 +88,7 @@ const appendBook = async (e) => {
     });
     if (response.ok) {
       console.log("if response.ok this will show");
-      document.location.reload();
+      document.location.reload('/');
     }
   }
 };
