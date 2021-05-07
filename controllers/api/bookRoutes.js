@@ -60,7 +60,6 @@ router.delete('/:id', (req, res) => {
       book_id: req.params.id,
     },
   }).then(removeBook => {
-    console.log(removeBook)
     res.status(200).json(removeBook)
   })
 })
