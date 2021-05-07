@@ -284,16 +284,16 @@
   color: white;
   text-align: center;
   font-size: 18px;
-  margin: 10px;
+  margin: 20px 10px;
   background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
   border-radius: 12px;
-  padding: 5px;
+  padding: 15px 5px;
   overflow-x: hidden;
 }
 
 .search-img {
   /* margin: 10px; */
-  min-width: 85%;
+  max-width: 85%;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
