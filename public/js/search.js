@@ -14,7 +14,6 @@ const searchDb = async (event) => {
       })
       .then((responseData) => {
         finalResults = responseData.docs;
-        console.log(finalResults);
         // for loop to only fetch 10 books?
         // append to a premade html
         finalResults.map((result, index) => {
@@ -45,7 +44,6 @@ const searchDb = async (event) => {
       });
 
     function appendResults() {
-      console.log("append results btn");
       for (let i = 0; i < finalResults.length; i++) {
         let result = finalResults[i];
         $(".appended-results").append(result);
@@ -53,13 +51,10 @@ const searchDb = async (event) => {
     }
 
     function searchHistory() {
-      console.log("search history function");
       const searches = JSON.parse(localStorage.getItem("searches"));
-      console.log(searches);
       for (let i = 0; i < searches.length; i++) {
         let recent = $("<li class=finalResults>").text(searches[i]);
         $(".search-result").append(recent);
-        // console.log(recent);
       }
     }
     searchHistory();
@@ -73,9 +68,6 @@ $(".search-form").on("submit", searchDb);
 
 const appendBook = async (e) => {
   e.preventDefault();
-  console.log("hi1");
-
-  console.log("append book function");
 
   const id = document.getElementById("book_id").value.trim();
   const body = document.getElementById("searchResultsSection");
@@ -87,14 +79,12 @@ const appendBook = async (e) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      console.log("if response.ok this will show");
-      document.location.reload('/');
+      document.location.reload("/");
     }
   }
 };
 
 let bookSender = document.getElementById("list-books");
 if (bookSender) {
-  console.log("hi");
   bookSender.addEventListener("click", appendBook);
 }

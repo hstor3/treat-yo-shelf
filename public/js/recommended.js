@@ -6,7 +6,6 @@ function getApi(genre) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       let genre = $("<div>").text(data.docs[0].title);
 
       $(".suggested").append(genre);

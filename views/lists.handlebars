@@ -26,10 +26,11 @@
     {{/each}}
 
 {{!-- this may or may not be part of the problem.. --}}
-    {{#each book.Review as |review| }}
+    {{#each reviews as |review| }}
     <div class="posted-reviews">{{review.body}}</div>
+    <button class="reviewDeleter" data-id={{book_id}}>
+  Delete
+</button>
     {{/each}}
 </div>
 <input type="hidden" value={{book_id}} id="book_value" />
-<script src="/js/book.js"></script>
-<script src="/js/review.js"></script>
