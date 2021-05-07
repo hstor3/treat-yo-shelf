@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Comment, Book } = require("../models");
+const { User, Comment, Book, Review } = require("../models");
 
 router.get("/lists/:id", async (req, res) => {
   const bookId = await Post.findByPk(req.params.userId, {
@@ -12,7 +12,7 @@ router.get("/lists/:id", async (req, res) => {
   });
 
   const books = bookId.get({ plain: true });
-  console.log(books);
+  // console.log(books);
   res.render("lists", {
     books,
     loggedIn: req.session.loggedIn,
@@ -51,12 +51,20 @@ router.get("/search", (req, res) => {
 
 router.get("/lists", async (req, res) => {
   console.log('we tried')
-    const booksresult = await Book.findAll()
-  const books = booksresult.map((book) => {
-    return book.get({
-      plain: true })
-  })
-  console.log(books)
+  const booksresult = await Book.findAll({
+    include: [
+      {
+        model: Review,
+        attributes: ['id'],
+      }
+    ]
+  });
+  console.log(booksresult)
+    const books = booksresult.map((book) => {
+      return book.get({
+        plain: true })
+    })
+  // console.log(books)
   res.render("lists", {
     books,
     loggedIn: req.session.loggedIn

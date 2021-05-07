@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Book } = require("../../models");
+const { Book, Review } = require("../../models");
 
 router.get("/books", async (req, res) => {
   // req.session.userId
@@ -64,5 +64,80 @@ router.delete('/:id', (req, res) => {
     res.status(200).json(removeBook)
   })
 })
+
+router.get('/:id/reviews', (req, res) => {
+  res.render('reviews', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.get('/:id/reviews', (req, res) => {
+  console.log('get review route')
+  const reviewData = Review.findByPk(req.params.id, {
+    include: [
+      {
+        model: Book,
+        attributes: ['id'],
+      },
+    ],
+  });
+  const review = reviewData.get({ plain: true });
+  res.render('reviews', {
+    review,
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.post('/:id/reviews', (req, res) => {
+  console.log('create review route')
+  console.log(req.body);
+  console.log(req.params)
+  console.log(req.session)
+
+  Review.create({
+    body: req.body.review,
+    bookId: req.params.id,
+    user_id: req.session.userId,
+  // }).then((newReview) => {
+    // res.status(200).json(newReview)
+  }).then(() => {
+    console.log(req.body)
+    res.redirect('/lists')
+  })
+});
+
+router.delete('/:id/reviews', (req, res) => {
+  console.log('destroyyyyy the review!!!')
+  Review.destroy({
+    where: {
+      id: req.params.id,
+    },
+  }).then(destroyReview => {
+    res.status(200).json(destroyReview)
+    res.render('/lists')
+  })
+});
+
+router.get('/book/:id/reviews', (req, res) => {
+  res.render('reviews', {
+    loggedIn: req.session.loggedIn
+  })
+});
+
+router.get('/book/reviews/:id', (req, res) => {
+  const reviewInfo = Review.findByPk(req.params.id, {
+    include: [
+      {
+        model: Book,
+        attributes: ['id'],
+      },
+    ],
+  });
+  const review = reviewInfo.get({ plain: true });
+  res.render('reviews', {
+    review,
+    loggedIn: req.session.loggedIn
+  })
+});
 
 module.exports = router;

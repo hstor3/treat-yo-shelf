@@ -14,17 +14,36 @@
     {{!-- </div> --}}
     <div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
     <button class="bookDeleter" data-id={{book_id}}>Delete</button>
-    {{!-- 
-    <div class="comments">
-      <label for="comment-title">Add comments here!</label>
-      <input class="comment-input" />
-      <div class="comment">
-        <button class="btn btn-primary" id="confirm-comment" type="submit">Comment!</button>
+    
+    {{!-- <div class="review">
+      <label for="review-title">Add reviews here!</label>
+      <input class="review-input" />
+      <div class="review">
+        <button class="btn btn-primary" id="confirm-review" type="submit">review!</button>
       </div>
-    </div> --}}
+    </div>
 
-    {{/each}}
+    <input type="hidden" value={{book.id}} id="book_id" /> --}}
+    {{!-- {{#each book.Review as |review| }}
+    <div class="posted-reviews">{{review.body}}</div>
+    {{/each}} --}}
   </div>
+  <form action='/api/books/{{book.book_id}}/reviews' method='POST'>
+      <div class="review">
+      <label for="review-title">Add reviews here!</label>
+      <input name='review' class="review-input" />
+      {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
+      <div class="review">
+        <button class="btn btn-primary" id="confirm-review" type="submit">review!</button>
+      </div>
+    </div>
+  </form>
+    {{/each}}
+
+    {{#each book.Review as |review| }}
+    <div class="posted-reviews">{{review.body}}</div>
+    {{/each}}
 </div>
-{{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
+<input type="hidden" value={{book_id}} id="book_value" />
 <script src="/js/book.js"></script>
+<script src="/js/review.js"></script>

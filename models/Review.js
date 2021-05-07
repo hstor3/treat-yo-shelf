@@ -7,33 +7,37 @@ class Review extends Model {}
 
 Review.init(
   {
-    review_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false,
-      autoIncrement: true,
-    },
-    user: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    book_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    rating: {
-      type: DataTypes.INTEGER,
-    },
-    comment: {
-      type: DataTypes.TEXT,
-    },
+    // review_id: {
+      // type: DataTypes.INTEGER,
+      // primaryKey: true,
+    //   allowNull: false,
+    //   autoIncrement: true,
+    // },
+    // user: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
+    // book_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
+    // rating: {
+    //   type: DataTypes.INTEGER,
+    // },
+    // comment: {
+    //   type: DataTypes.TEXT,
+    // },
+      body: {
+      type: DataTypes.STRING,
+        allowNull: false,
+      }
   },
   {
     sequelize,
-    timestamps: true,
-    freezeTableName: true,
+    // timestamps: true,
+    // freezeTableName: true,
     // underscored: true,
-    modelName: "Review",
+    // modelName: "Review",
   }
 );
 

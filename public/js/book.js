@@ -26,7 +26,7 @@ const deleteBook = async (e) => {
     const response = await fetch(`/api/books/${id}`, {
         method: 'DELETE'
     });
-    console.log(response)
+    // console.log(response)
     if (response.ok) {
         document.location.replace('/lists')
     } else {

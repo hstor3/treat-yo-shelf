@@ -59,7 +59,7 @@ const searchDb = async (event) => {
       for (let i = 0; i < searches.length; i++) {
         let recent = $("<li class=finalResults>").text(searches[i]);
         $(".search-result").append(recent);
-        console.log(recent);
+        // console.log(recent);
       }
     }
     searchHistory();
