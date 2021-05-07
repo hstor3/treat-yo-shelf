@@ -60,6 +60,85 @@
   padding: 22px;
   width: 85%;
 }
+/* Login page */
+.login-pg{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.logo-login {
+  width: 100%;
+  padding: 77px;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  /* background-image: inherit; */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+}
+
+.header-text-login {
+  margin-bottom: 16px;
+}
+
+.header-text-login h1 {
+  font-size: 50px;
+}
+
+.header-text-login h3 {
+  font-size: 43px;
+  margin-top: 10px;
+}
+
+.login-form {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8%;
+}
+
+.login-container input {
+  font-size: 18px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn-sub {
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.signup-form {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 22px;
+  height: 180px;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8%;
+}
+
+.signup-btn-sub {
+  padding: 20px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 
 /* Search page */
 .search-pg{
