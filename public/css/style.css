@@ -380,6 +380,31 @@
   color: white;
 }
 
+.appended-results {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 10px;
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  border-radius: 12px;
+  padding: 15px 5px;
+  overflow-x: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+
+.bookDeleter {
+  background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
 /* recommended */
 .header-text-recommended {
   color: white;
@@ -445,11 +470,3 @@
   text-decoration: none;
 }
 
-.bookDeleter {
-    background-image: linear-gradient(var(--blue-l), var(--blue), var(--blue-d));
-  padding: 20px;
-  color: white;
-  border-radius: 12px;
-  border: none;
-  margin-left: 10px;
-}

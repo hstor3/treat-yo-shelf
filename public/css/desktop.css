@@ -17,7 +17,7 @@
   font-size: 54px;
   flex-direction: column;
   padding: 22px 0px;
-  
+  background-image: linear-gradient(to bottom left, var(--blue-l), var(--blue), var(--blue-d));
 }
 
 .nav-list {
