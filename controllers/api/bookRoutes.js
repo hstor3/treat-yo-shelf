@@ -1,53 +1,51 @@
 const router = require("express").Router();
 const { Book } = require("../../models");
-const withAuth = require("../../utils/auth");
 
-router.get('/books', async (req, res) => {
+router.get("/books", async (req, res) => {
   // req.session.userId
   let booksresult = await Book.findByPk(req.params.id, {
     include: [
       {
         model: Book,
-        attributes: ['id'],
+        attributes: ["id"],
       },
     ],
   });
   const books = booksresult.get({ plain: true });
-  res.render('lists', {
+  res.render("lists", {
     books,
-    loggedIn: req.session.loggedIn
-  })
+    loggedIn: req.session.loggedIn,
+  });
 });
 
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   // console.log(req);
   Book.create({
     title: req.body.title,
-    author: req.body.author
+    author: req.body.author,
   }).then((addBook) => {
-    res.status(200).json(addBook)
-  })
+    res.status(200).json(addBook);
+  });
 });
 
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   Book.update(req.body, {
     where: {
       id: req.params.id,
-    }
-  }).then(newBook => {
-    res.status(200).json(newBook)
-  })
-  res.render('lists')
-})
+    },
+  }).then((newBook) => {
+    res.status(200).json(newBook);
+  });
+  res.render("lists");
+});
 
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   Book.destroy({
     where: {
-      id: req.params.id,
+      book_id: req.params.id,
     },
   }).then(removeBook => {
     res.status(200).json(removeBook)
-    res.render('lists')
   })
 })
 
