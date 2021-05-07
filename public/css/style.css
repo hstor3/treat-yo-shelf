@@ -414,6 +414,15 @@
   margin-bottom: 16px;
 }
 
+/* account page */
+.header-text-account {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 16px;
+}
+
 /* about us page */
 .dev-holder{
   display: flex;
