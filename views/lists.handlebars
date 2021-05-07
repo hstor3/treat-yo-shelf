@@ -7,20 +7,22 @@
   {{!-- {{book.title}}{{book.author}} --}}
 </div>
 
-{{#each books as |book|}}
 <div class="search-result" id="search-result">
+{{#each books as |book|}}
   <p class="list-description">Description paragraphs words go here</p>
-</div>
+{{!-- </div> --}}
 <div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
-
+<button class="bookDeleter" data-id={{book_id}}>Delete</button>
+{{!-- 
     <div class="comments">
       <label for="comment-title">Add comments here!</label>
       <input class="comment-input" />
       <div class="comment">
         <button class="btn btn-primary" id="confirm-comment" type="submit">Comment!</button>
       </div>
-    </div>
+    </div> --}}
 
 {{/each}}
-
+</div>
 {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
+<script src="/js/book.js"></script>

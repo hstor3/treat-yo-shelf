@@ -19,6 +19,20 @@ router.get('/books', async (req, res) => {
   })
 });
 
+// router.get('/books/:id', async (req, res) => {
+//   const bookData = await Book.findByPk(req.params.id, {
+//     include: [
+//       {
+//         model: Book,
+//         attributes: ['id'],
+//       },
+//     ],
+//   });
+
+//   const book = bookData.get({ plain: true });
+
+// })
+
 router.post('/', (req, res) => {
   // console.log(req);
   Book.create({
@@ -41,13 +55,14 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
+  console.log('delete route')
   Book.destroy({
     where: {
-      id: req.params.id,
+      book_id: req.params.id,
     },
   }).then(removeBook => {
+    console.log(removeBook)
     res.status(200).json(removeBook)
-    res.render('lists')
   })
 })
 
