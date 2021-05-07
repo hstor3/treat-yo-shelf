@@ -1,12 +1,5 @@
 const router = require("express").Router();
-const { User, Comment } = require("../models");
-
-router.get("/lists", async (req, res) => {
-  console.log("hey");
-  res.render("lists", {
-    loggedIn: req.session.loggedIn,
-  });
-});
+const { User, Comment, Book } = require("../models");
 
 router.get("/lists/:id", async (req, res) => {
   const bookId = await Post.findByPk(req.params.userId, {
@@ -56,11 +49,19 @@ router.get("/search", (req, res) => {
   });
 });
 
-router.get("/lists", (req, res) => {
+router.get("/lists", async (req, res) => {
+  console.log('we tried')
+    const booksresult = await Book.findAll()
+  const books = booksresult.map((book) => {
+    return book.get({
+      plain: true })
+  })
+  console.log(books)
   res.render("lists", {
-    loggedIn: req.session.loggedIn,
+    books,
+    loggedIn: req.session.loggedIn
+  })
   });
-});
 
 router.get("/recommended", (req, res) => {
   res.render("recommended", {

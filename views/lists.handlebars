@@ -1,24 +1,26 @@
 {{!-- saved books will be saved here --}}
-
 <div class="header-text-list">
-  <h1>MY LIST</h1>
-  {{book.title}}{{book.author}}
+  <h1>MY LIST
+{{!-- {{books}} --}}
+
+  </h1>
+  {{!-- {{book.title}}{{book.author}} --}}
 </div>
 
-{{!-- {{#each results as |result|}} --}}
+{{#each books as |book|}}
 <div class="search-result" id="search-result">
   <p class="list-description">Description paragraphs words go here</p>
 </div>
-<div class="appended-results">Title: {{books.title}} Author: {{books.author}}</div>
-{{!-- 
+<div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
+
     <div class="comments">
       <label for="comment-title">Add comments here!</label>
       <input class="comment-input" />
       <div class="comment">
         <button class="btn btn-primary" id="confirm-comment" type="submit">Comment!</button>
       </div>
-    </div> --}}
+    </div>
 
-{{!-- {{/each}} --}}
+{{/each}}
 
 {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
