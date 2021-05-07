@@ -36,7 +36,10 @@ const searchDb = async (event) => {
                 </h3><br>
                 <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
                 <button type="submit" class="list-add" id="list-books">Add to my List</button><br>
-              </form>`);
+              </form>
+              <div>
+        <br><br><br><br><br>
+        </div>`);
           }
         });
       });

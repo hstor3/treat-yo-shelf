@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-/* .navbar {
+.navbar {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -29,7 +29,7 @@
   padding: 8px;
   z-index: 1;
   overflow-x: hidden;
-} */
+}
 
 .hamburger {
   background-color: transparent;
@@ -295,6 +295,7 @@
   overflow-x: hidden;
   margin-right: auto;
   margin-left: auto;
+  width: 95%;
 }
 
 .search-img {
