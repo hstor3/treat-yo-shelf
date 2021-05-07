@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Book, Review } = require("../models");
+const { User, Book } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/lists/:id", withAuth, async (req, res) => {
@@ -12,22 +12,9 @@ router.get("/lists/:id", withAuth, async (req, res) => {
     ],
   });
 
-  const reviewId = await Review.findByPk({
-    where: {
-      review_id: req.params.userId,
-    },
-    include: [
-      {
-        model: Book,
-        attributes: ["userid"],
-      },
-    ],
-  });
-
   const books = bookId.get({ plain: true });
   res.render("lists", {
     books,
-    // Review,
   });
 });
 
@@ -57,36 +44,14 @@ router.get("/account", withAuth, (req, res) => {
 });
 
 router.get("/lists", withAuth, async (req, res) => {
-  const booksresult = await Book.findAll({
-    include: [
-      {
-        model: Review,
-        attributes: ["review_id"],
-      },
-    ],
-  });
+  const booksresult = await Book.findAll();
   const books = booksresult.map((book) => {
-    return book.get({
-      plain: true,
-    });
-  });
-
-  const reviewResults = await Review.findAll({
-    include: [
-      {
-        model: Book,
-        attributes: ["book_id"],
-      },
-    ],
-  });
-  const reviews = reviewResults.map((book) => {
     return book.get({
       plain: true,
     });
   });
   res.render("lists", {
     books,
-    reviews,
   });
 });
 
@@ -98,7 +63,7 @@ router.get("/about", withAuth, (req, res) => {
   res.render("about");
 });
 
-router.get("/", withAuth, (req, res) => {
+router.get("/", (req, res) => {
   res.render("homepage");
 });
 
