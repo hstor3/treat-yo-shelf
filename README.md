@@ -28,8 +28,9 @@ To install: <code>node index.js</code>
 
 ## 🖼️ Screenshots <a name="screenshots"></a>
 
-* Mobile Layout
-* Desktop Layout
+[Link to Deployed App](https://treatyourshelf.herokuapp.com/)
+
+
 
 ## 📝 Tests <a name="tests"></a>
 No tests are available at this time.
