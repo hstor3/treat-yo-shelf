@@ -42,12 +42,11 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Book.destroy({
     where: {
-      id: req.params.id,
+      book_id: req.params.id,
     },
-  }).then((removeBook) => {
-    res.status(200).json(removeBook);
-    res.render("lists");
-  });
-});
+  }).then(removeBook => {
+    res.status(200).json(removeBook)
+  })
+})
 
 module.exports = router;
