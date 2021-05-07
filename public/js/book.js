@@ -14,7 +14,7 @@ const deleteBook = async (e) => {
 };
 
 let bookDelete = document.getElementsByClassName("bookDeleter");
-  (bookDelete);
+bookDelete;
 if (bookDelete) {
   for (let i = 0; i < bookDelete.length; i++) {
     bookDelete[i].addEventListener("click", deleteBook);

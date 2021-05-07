@@ -6,31 +6,11 @@
   <div class="search-result" id="search-result">
     {{#each books as |book|}}
     {{!-- displays to book title and author --}}
-    <p class="list-description">Description paragraphs words go here</p>
-    <div class="appended-results">Title: {{book.title}} Author: {{book.author}}</div>
+    <div class="appended-results">Title: {{book.title}} <br> Author: {{book.author}}</div>
     <button class="bookDeleter" data-id={{book_id}}>Delete</button>
     
   </div>
 
-  {{!-- this routes correctly but isn't being displayed correctly --}}
-  <form action='/api/books/{{book.book_id}}/reviews' method='POST'>
-      <div class="review">
-      <label for="review-title">Add reviews here!</label>
-      <input name='review' class="review-input" />
-      {{!-- <input type="hidden" value={{book.id}} id="book_id" /> --}}
-      <div class="review">
-        <button class="btn btn-primary" id="confirm-review" type="submit">review!</button>
-      </div>
-    </div>
-  </form>
-    {{/each}}
-
-{{!-- this may or may not be part of the problem.. --}}
-    {{#each reviews as |review| }}
-    <div class="posted-reviews">{{review.body}}</div>
-    <button class="reviewDeleter" data-id={{book_id}}>
-  Delete
-</button>
     {{/each}}
 </div>
 <input type="hidden" value={{book_id}} id="book_value" />

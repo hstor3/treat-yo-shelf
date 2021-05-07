@@ -307,7 +307,6 @@
   overflow-x: hidden;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .search-title {
@@ -424,7 +423,7 @@
 }
 
 /* about us page */
-.dev-holder{
+.dev-holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,7 +433,7 @@
   position: relative;
 }
 
-.dev-header-text{
+.dev-header-text {
   color: white;
   font-size: 25px;
   text-align: center;
@@ -456,7 +455,7 @@
   flex-direction: row;
 }
 
-.dev-icons{
+.dev-icons {
   color: white;
   margin: 20px;
   display: flex;
@@ -478,4 +477,3 @@
   margin: 20px;
   text-decoration: none;
 }
-

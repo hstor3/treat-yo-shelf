@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Book, Review } = require("../../models");
+const { Book } = require("../../models");
 
 // gets book by pk
 router.get("/books", async (req, res) => {
@@ -63,59 +63,6 @@ router.delete("/:id", (req, res) => {
     },
   }).then((removeBook) => {
     res.status(200).json(removeBook);
-  });
-});
-
-router.get("/:id/reviews", (req, res) => {
-  res.render("reviews", {
-    loggedIn: req.session.loggedIn,
-  });
-});
-
-// finds reviews by pk
-router.get("/:id/reviews", (req, res) => {
-  console.log("get review route");
-  const reviewData = Review.findByPk(req.params.id, {
-    include: [
-      {
-        model: Book,
-        attributes: ["id"],
-      },
-    ],
-  });
-  const review = reviewData.get({ plain: true });
-  res.render("reviews", {
-    review,
-    loggedIn: req.session.loggedIn,
-  });
-});
-
-// this route works and saves reviews to database
-router.post("/:id/reviews", (req, res) => {
-  console.log("create review route");
-  console.log(req.params.id);
-
-  Review.create({
-    body: req.body.review,
-    user_id: req.session.userId,
-    book_id: req.params.id,
-  }).then(() => {
-    console.log("Created");
-    console.log(req.body);
-    res.redirect("/lists");
-  });
-});
-
-// if we had a delete button for reviews and more time
-router.delete("/:id/reviews", (req, res) => {
-  console.log("destroyyyyy the review!!!");
-  Review.destroy({
-    where: {
-      id: req.params.id,
-    },
-  }).then((destroyReview) => {
-    res.status(200).json(destroyReview);
-    res.render("/lists");
   });
 });
 

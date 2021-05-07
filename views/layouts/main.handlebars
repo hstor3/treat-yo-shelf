@@ -1,95 +1,103 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/img/treatyoshelf-logo.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
-    integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="/css/reset.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/desktop.css" />
-  <title>
-    Home
-  </title>
-</head>
-
-<body class="background-img">
-  <a class="top-logout-btn" href="./account">
-    logout
-    <i class="fas fa-cog"></i>
-  </a>
-  {{{body}}}
-  <nav class="navbar">
-    <a href="/">
-      <i class="fas fa-home"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/treatyoshelf-logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+      integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/desktop.css" />
+    <title>
+      Home
+    </title>
+  </head>
+  <body class="background-img">
+    <a class="top-logout-btn" href="./account">
+      logout
+      <i class="fas fa-cog"></i>
     </a>
-    <a href="/search">
-      <i class="fas fa-search"></i>
-    </a>
-    <a href="/lists">
-      <i class="fas fa-layer-group"></i>
-    </a>
-    <a href="./recommended">
-      <i class="fas fa-book-open"></i>
-    </a>
-    <button id="hamburger" class="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul id="nav-list" class="nav-list">
-      <li>
-        <a href="/">
-          <i class="fas fa-home"></i>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="./search">
-          <i class="fas fa-search"></i>
-          Search
-        </a>
-      </li>
-      <li>
-        <a href="./lists">
-          <i class="fas fa-layer-group"></i>
-          My List
-        </a>
-      </li>
-      <div class="icon-inline">
+    {{{body}}}
+    <nav class="navbar">
+      <a href="/">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="/search">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="/lists">
+        <i class="fas fa-layer-group"></i>
+      </a>
+      <a href="./recommended">
+        <i class="fas fa-book-open"></i>
+      </a>
+      <button id="hamburger" class="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="nav-list" class="nav-list">
         <li>
-          <a href="./recommended">
-            <i class="fas fa-book-open"></i>
-            Recommended
+          <a href="/">
+            <i class="fas fa-home"></i>
+            Home
           </a>
         </li>
-      </div>
-      <li>
-        <a href="./account">
-          <i class="fas fa-cog"></i>
-          My Account
-        </a>
-      </li>
-      <li>
-        <a href="./about">
-          About US
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-  <script src="/js/animation.js"></script>
-  <script src="/js/login.js"></script>
-  <script src="/js/logout.js"></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/nav.js"></script>
-  <script src="/js/book.js"></script>
-  <script src="/js/review.js"></script>
-</body>
-
+        <li>
+          <a href="./search">
+            <i class="fas fa-search"></i>
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="./lists">
+            <i class="fas fa-layer-group"></i>
+            My List
+          </a>
+        </li>
+        <div class="icon-inline">
+          <li>
+            <a href="./recommended">
+              <i class="fas fa-book-open"></i>
+              Recommended
+            </a>
+          </li>
+        </div>
+        <li>
+          <a href="./account">
+            <i class="fas fa-cog"></i>
+            My Account
+          </a>
+        </li>
+        <li>
+          <a href="./about">
+            About US
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    ></script>
+    <script src="/js/animation.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/book.js"></script>
+    <script src="/js/review.js"></script>
+  </body>
 </html>
