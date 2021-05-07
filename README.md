@@ -10,6 +10,7 @@
 - [Screenshots](#screenshots)
 - [Tests](#tests)
 - [License](#license)
+- [Credits](#credits)
 
 ## 🔍 Description <a name="description"></a>
 Want to organize your book collections but don’t want to use Goodreads?
@@ -37,3 +38,6 @@ No tests are available at this time.
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 <br />
 This application is covered by the [MIT license](LICENSE.md). 
+
+## ❤️ Credits <a name="credits"></a>
+* Parks & Recreation for the app name
