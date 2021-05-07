@@ -30,6 +30,14 @@ To install: <code>node index.js</code>
 
 [Link to Deployed App](https://treatyourshelf.herokuapp.com/)
 
+<table>
+  <tr>
+    <td>Home</td><td>Search</td><td>List</td>
+  </tr>
+  <tr style="vertical-align:top">
+    <td style="vertical-align:top"> <img src="assets/home-page.png"> </td><td style="vertical-align:top"> <img src="assets/search-page.png"> </td><td style="vertical-align:top"> <img src="assets/list-page.png"> </td>
+  </tr>
+ </table>
 
 
 ## 📝 Tests <a name="tests"></a>
