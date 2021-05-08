@@ -5,7 +5,6 @@
 
 ## 📖 Table of Contents
 - [Description](#description)
-- [Challenges](#challenges)
 - [Installation](#install)
 - [Screenshots](#screenshots)
 - [Tests](#tests)
@@ -19,12 +18,13 @@ Many people have been looking for alternate solutions to Goodreads ever since it
 
 We’ve created a user-friendly app that lets you organize your books and treat your bookshelf!
 
-## ⛰️ Challenges <a name="challenges"></a>
-
-
 ## 💾 Installation <a name="install"></a>
-To install: <code>node index.js</code>
-
+To install:
+1. Clone this repo!
+2. In the command line, type 
+```sh
+npm install
+```
 
 ## 🖼️ Screenshots <a name="screenshots"></a>
 
