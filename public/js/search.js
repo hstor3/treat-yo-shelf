@@ -20,7 +20,7 @@ const searchDb = async (event) => {
           if (index < 10) {
             $("#searchResultsSection").append(`
               <form action="/api/books" method="POST">
-                
+                <div class="search-display-card">
                 <h1 class="search-title">
                     <label for=""></label>
                     <input name="title" type="hidden" value="${result.title}">
@@ -35,8 +35,9 @@ const searchDb = async (event) => {
                 </h3><br>
                 <img class="search-img" src="http://covers.openlibrary.org/b/id/${result.cover_i}-L.jpg" alt="Book IMG" />
                 <button type="submit" class="list-add" id="list-books">Add to my List</button><br>
+              </div>
               </form>
-              <div>
+        <div>
         <br><br><br><br><br>
         </div>`);
           }
