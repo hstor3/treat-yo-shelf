@@ -198,15 +198,13 @@
 
   .search-title {
     color: white;
-    align-items: center;
-    justify-content: center;
+    font-size: 45px;
     margin: 10px;
   }
 
   .search-author {
     color: white;
-    align-items: center;
-    justify-content: center;
+    font-size: 35px;
     margin: 10px;
   }
 

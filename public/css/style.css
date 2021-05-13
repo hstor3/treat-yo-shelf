@@ -295,13 +295,15 @@
   overflow-x: hidden;
   margin-right: auto;
   margin-left: auto;
-  width: 95%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .search-img {
   /* margin: 10px; */
-  max-width: 85%;
-  min-width: 75%;
+  max-width: 65%;
+  /* min-width: 75%; */
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
@@ -311,20 +313,18 @@
 
 .search-title {
   color: white;
+  font-size: 25px;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  align-items: center;
-  justify-content: center;
 }
 
 .search-author {
   color: white;
+  font-size: 18px;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  align-items: center;
-  justify-content: center;
 }
 
 .list-add {

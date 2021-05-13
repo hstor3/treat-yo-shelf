@@ -37,9 +37,7 @@ const searchDb = async (event) => {
                 <button type="submit" class="list-add" id="list-books">Add to my List</button><br>
               </div>
               </form>
-        <div>
-        <br><br><br><br><br>
-        </div>`);
+        `);
           }
         });
       });
